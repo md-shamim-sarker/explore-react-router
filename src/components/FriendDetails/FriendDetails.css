@@ -4,9 +4,6 @@
     align-items: center;
 }
 
-.image {
-    width: 5rem;
-    height: 5rem;
-    background-color: blueviolet;
+.FriendDetails img {
     border-radius: 50%;
 }

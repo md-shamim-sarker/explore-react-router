@@ -8,7 +8,7 @@ const Friends = () => {
     const friends = useLoaderData();
 
     return (
-        <div className='Friends'>
+        <div className='Friends container'>
             {
                 friends.map(friend => <Friend
                     key={friend.id}

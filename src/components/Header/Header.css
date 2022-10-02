@@ -1,15 +1,29 @@
 .Header {
-    margin-top: 1rem;
+    padding-top: 0.5rem;
+    background-color: bisque;
 }
 
 .Header a {
     text-decoration: none;
     margin-left: 1.5rem;
     padding: 0.3rem;
+    color: white;
 }
 
 .Header a:hover {
-    background-color: aquamarine;
+    background-color: blue;
     padding: 0.3rem;
     border-radius: 0.5rem;
+}
+
+.Header nav {
+    background-color: black;
+    color: white;
+    padding: 0.5rem 0;
+}
+
+@media screen and (max-width: 768px) {
+    .Header a {
+        margin-left: 0.8rem;
+    }
 }

@@ -1,6 +1,6 @@
 .Friend {
     border: 1px solid gray;
-    padding: 0 1rem 1.5rem 1rem;
+    padding: 1rem;
 }
 
 .Friend h2 {
@@ -13,4 +13,12 @@
     text-decoration: none;
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+    .Friend {
+        /* width: 100vw; */
+        border: 1px solid gray;
+        padding: 0 1rem 1.5rem 1rem;
+    }
 }

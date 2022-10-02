@@ -8,7 +8,7 @@ const FriendDetails = () => {
     return (
         <div className='FriendDetails'>
             <h2>Friend Details</h2>
-            <div className='image'></div>
+            <img src="https://placeimg.com/150/150/people" alt="placeholder_image" />
             <h3>Name: {name}</h3>
             <h4>
                 Phone Number: {phone} <br />
