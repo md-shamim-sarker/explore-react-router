@@ -4,5 +4,12 @@
 
 .Header a {
     text-decoration: none;
-    margin-left: 2rem;
+    margin-left: 1.5rem;
+    padding: 0.3rem;
+}
+
+.Header a:hover {
+    background-color: aquamarine;
+    padding: 0.3rem;
+    border-radius: 0.5rem;
 }

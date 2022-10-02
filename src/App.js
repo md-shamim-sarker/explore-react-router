@@ -1,15 +1,32 @@
 import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 import './App.css';
 import About from './components/About/About';
+import ErrorPage from './components/ErrorPage/ErrorPage';
+import Friends from './components/Friends/Friends';
 import Home from './components/Home/Home';
 import Products from './components/Products/Products';
+import Main from './layout/Main';
 
 function App() {
   const router = createBrowserRouter([
-    {path: '/', element: <h1>Default Page.</h1>},
-    {path: '/home', element: <Home></Home>},
-    {path: '/about', element: <About></About>},
-    {path: '/products', element: <Products></Products>},
+    {
+      path: '/',
+      element: <Main></Main>,
+      children: [
+        {path: '/', element: <Home></Home>},
+        {path: '/home', element: <Home></Home>},
+        {path: '/about', element: <About></About>},
+        {path: '/products', element: <Products></Products>},
+        {
+          path: '/friends',
+          loader: async () => {
+            return fetch("https://jsonplaceholder.typicode.com/users");
+          },
+          element: <Friends></Friends>
+        },
+      ]
+    },
+    {path: '/*', element: <ErrorPage></ErrorPage>}
   ]);
   return (
     <div className="App">

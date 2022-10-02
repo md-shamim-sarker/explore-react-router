@@ -1,0 +1,8 @@
+.Friend {
+    border: 1px solid gray;
+    padding: 0 1rem 1.5rem 1rem;
+}
+
+.Friend h2 {
+    text-align: center;
+}
