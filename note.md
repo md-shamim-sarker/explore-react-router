@@ -324,3 +324,67 @@ const FriendDetails = () => {
 
 export default FriendDetails;
 ```
+
+## An Alternative Way to Routing
+
+```js
+// Header.js
+import React from 'react';
+import {Link} from 'react-router-dom';
+
+const Header = () => {
+    return (
+        <nav>
+            <Link to={"/"}>Home</Link>
+            <Link to={"/about"}>About</Link>
+            <Link to={"/products"}>Products</Link>
+        </nav>
+    );
+};
+
+export default Header;
+```
+
+```js
+// App.js
+import React from 'react';
+import {Route, Routes} from 'react-router-dom';
+import './App.css';
+import About from './components/About';
+import Header from './components/Header';
+import Home from './components/Home';
+import Products from './components/Products';
+
+const App = () => {
+  return (
+    <div className='App'>
+      <Header></Header>
+      <Routes>
+        <Route path={'/'} element={<Home></Home>}></Route>
+        <Route path={'/about'} element={<About></About>}></Route>
+        <Route path={'/products'} element={<Products></Products>}></Route>
+      </Routes>
+    </div>
+  );
+};
+
+export default App;
+```
+
+```js
+// Index.js
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+import {BrowserRouter} from 'react-router-dom';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </React.StrictMode>
+);
+```
