@@ -6,3 +6,11 @@
 .Friend h2 {
     text-align: center;
 }
+
+.Friend a {
+    background-color: #3333f1;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
